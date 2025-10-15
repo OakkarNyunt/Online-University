@@ -5,6 +5,9 @@ import { SelectBox } from "./SelectBox";
 import { SearchBtn } from "./SearchBtn";
 import Profile from "./Profile";
 import SideBar from "./SideBar";
+import { LoginDialogBox } from "./Login";
+
+const isLogin = false;
 
 const Header = () => {
   return (
@@ -27,7 +30,7 @@ const Header = () => {
           </div>
           <SearchBtn />
           <ModeToggle />
-          <Profile />
+          {isLogin ? <Profile /> : <LoginDialogBox />}
         </div>
       </div>
     </div>
