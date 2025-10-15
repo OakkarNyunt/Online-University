@@ -1,0 +1,10 @@
+Guide
+----------------
+
+follow shadcn doc
+
+Google Fonts
+ 
+React Icons
+
+npm install react-icons --save
