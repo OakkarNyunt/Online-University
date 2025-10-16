@@ -39,6 +39,7 @@ const SideBar = () => {
             </SheetTitle>
             <SheetDescription>
               <SideBarMenu />
+
               <div className="flex min-h-screen">
                 <div className="absolute bottom-0 mb-4">Online University</div>
               </div>

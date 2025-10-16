@@ -9,6 +9,10 @@ import {
 } from "@/components/ui/navigation-menu";
 import { Link } from "react-router-dom";
 
+//local imports
+import { Categories } from "@/assets/Data/Categories";
+import { ScrollArea } from "@/components/ui/scroll-area";
+
 export function HeaderNavBar() {
   return (
     <NavigationMenu viewport={false}>
@@ -16,31 +20,19 @@ export function HeaderNavBar() {
         <NavigationMenuItem>
           <NavigationMenuTrigger>Categories</NavigationMenuTrigger>
           <NavigationMenuContent>
-            <ul className="w-[400px] gap-2">
-              <li className="grid grid-cols-2">
-                <NavigationMenuLink asChild>
-                  <Link to="#">IT </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link to="#">Management </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link to="#">Engineering </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link to="#">Engineering </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link to="#">Medical </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link to="#">Language </Link>
-                </NavigationMenuLink>
-                <NavigationMenuLink asChild>
-                  <Link to="#">Business </Link>
-                </NavigationMenuLink>
-              </li>
-            </ul>
+            <ScrollArea className="h-[200px] rounded-md border p-4">
+              <ul className="w-[400px] gap-2">
+                <li className="grid grid-cols-2">
+                  {Categories.map((category) => (
+                    <NavigationMenuLink asChild>
+                      <Link to="#" key={category.id}>
+                        {category.name}
+                      </Link>
+                    </NavigationMenuLink>
+                  ))}
+                </li>
+              </ul>
+            </ScrollArea>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>

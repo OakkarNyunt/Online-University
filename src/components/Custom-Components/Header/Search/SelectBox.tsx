@@ -1,3 +1,5 @@
+import { Categories } from "@/assets/Data/Categories";
+import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Select,
   SelectContent,
@@ -15,13 +17,15 @@ export function SelectBox() {
         <SelectValue placeholder="Select Category" />
       </SelectTrigger>
       <SelectContent>
-        <SelectGroup>
-          <SelectLabel>Categories</SelectLabel>
-          <SelectItem value="apple">IT</SelectItem>
-          <SelectItem value="banana">Management</SelectItem>
-          <SelectItem value="blueberry">Finance</SelectItem>
-          <SelectItem value="grapes">Medical</SelectItem>
-          <SelectItem value="pineapple">Engineering</SelectItem>
+        <SelectGroup className="p-2">
+          <SelectLabel className="mb-2">Categories</SelectLabel>
+          <ScrollArea className="h-[300px]  rounded-md border p-2">
+            {Categories.map((category) => (
+              <SelectItem value={category.name} key={category.id}>
+                {category.name}
+              </SelectItem>
+            ))}
+          </ScrollArea>
         </SelectGroup>
       </SelectContent>
     </Select>
