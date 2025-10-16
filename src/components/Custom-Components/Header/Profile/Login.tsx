@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
-
 import { LoginSignUpTab } from "./Login-SignUp";
 
 export function LoginDialogBox() {

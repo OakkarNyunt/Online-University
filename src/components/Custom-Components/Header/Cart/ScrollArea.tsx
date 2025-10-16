@@ -10,8 +10,8 @@ import Cart from "./Cart";
 
 export function ScrollAreaDemo() {
   return (
-    <ScrollArea className="h-[530px] w-full rounded-md border">
-      <div className="p-4">
+    <ScrollArea className="h-[480px] w-full rounded-md border">
+      <div className="p-4 ">
         {/* {tags.map((tag) => (
           <React.Fragment key={tag}>
             <div className="text-sm">{tag}</div>

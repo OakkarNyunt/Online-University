@@ -1,14 +1,14 @@
 import { ModeToggle } from "../theme/mode-toggle";
 import { HeaderNavBar } from "./Header-navBar";
 import logo from "@/assets/images/online-university-logo.png";
-import { SelectBox } from "./SelectBox";
-import { SearchBtn } from "./SearchBtn";
-import Profile from "./Profile";
-import SideBar from "./SideBar";
-import { LoginDialogBox } from "./Login";
+import { SelectBox } from "./Search/SelectBox";
+import { SearchBtn } from "./Search/SearchBtn";
+import Profile from "./Profile/Profile";
+import SideBar from "./SideBar/SideBar";
+import { LoginDialogBox } from "./Profile/Login";
 import { Link } from "react-router-dom";
 
-import CartSidebar from "./CartSidebar";
+import CartSidebar from "./Cart/CartSidebar";
 
 const isLogin = false;
 
@@ -23,7 +23,9 @@ const Header = () => {
           <Link to="/">
             <img src={logo} alt="" className="hidden lg:block md:size-15" />
           </Link>
-          <h3 className="hidden lg:block">Online University</h3>
+          <Link to="/">
+            <h3 className="hidden lg:block">Online University</h3>
+          </Link>
         </div>
 
         <div className="hidden lg:block">
