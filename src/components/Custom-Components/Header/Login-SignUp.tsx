@@ -12,11 +12,33 @@ import { Label } from "@/components/ui/label";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
 
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  // SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+
 //React Icons import
 import { MdPhoneIphone } from "react-icons/md";
 import { FcGoogle } from "react-icons/fc";
+import { useState } from "react";
 
 export function LoginSignUpTab() {
+  const [placeholder, setPlaceholder] = useState("example@gmail.com");
+
+  const placeholderHandler = (value: string) => {
+    if (value === "phone") {
+      setPlaceholder("09xxxxxx");
+    }
+    if (value === "email") {
+      setPlaceholder("example@gmail.com");
+    }
+  };
+
   return (
     <div className="flex w-full max-w-sm flex-col gap-6">
       <Tabs defaultValue="account">
@@ -62,7 +84,20 @@ export function LoginSignUpTab() {
             <CardContent className="grid gap-6">
               <div className="grid gap-3">
                 <Label htmlFor="tabs-demo-current">Phone or Email</Label>
-                <Input id="tabs-demo-current" />
+                <div className="flex gap-2">
+                  <Select onValueChange={placeholderHandler}>
+                    <SelectTrigger className="w-[180px]">
+                      <SelectValue placeholder="select" />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectGroup>
+                        <SelectItem value="email">Email</SelectItem>
+                        <SelectItem value="phone">Phone</SelectItem>
+                      </SelectGroup>
+                    </SelectContent>
+                  </Select>
+                  <Input id="tabs-demo-current" placeholder={placeholder} />
+                </div>
               </div>
               <div className="grid gap-3">
                 <Label htmlFor="tabs-demo-new">password</Label>

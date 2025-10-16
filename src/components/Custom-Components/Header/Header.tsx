@@ -6,6 +6,9 @@ import { SearchBtn } from "./SearchBtn";
 import Profile from "./Profile";
 import SideBar from "./SideBar";
 import { LoginDialogBox } from "./Login";
+import { Link } from "react-router-dom";
+
+import CartSidebar from "./CartSidebar";
 
 const isLogin = false;
 
@@ -17,7 +20,9 @@ const Header = () => {
           <SideBar />
         </div>
         <div className="flex gap-2 items-center">
-          <img src={logo} alt="" className="hidden lg:block md:size-15" />
+          <Link to="/">
+            <img src={logo} alt="" className="hidden lg:block md:size-15" />
+          </Link>
           <h3 className="hidden lg:block">Online University</h3>
         </div>
 
@@ -29,6 +34,9 @@ const Header = () => {
             <SelectBox />
           </div>
           <SearchBtn />
+
+          <CartSidebar />
+
           <ModeToggle />
           {isLogin ? <Profile /> : <LoginDialogBox />}
         </div>

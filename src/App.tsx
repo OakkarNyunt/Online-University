@@ -4,6 +4,7 @@ import Main from "./Routes/MainContent";
 import Layouts from "./components/Custom-Components/Main/Layouts";
 import About from "./Routes/About";
 import { ThemeProvider } from "./components/Custom-Components/theme/theme-provider";
+import Contact from "./Routes/Contact";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Routes>
               <Route path="/" Component={Main} />
               <Route path="/about" Component={About} />
+              <Route path="/contact" Component={Contact} />
             </Routes>
           </Layouts>
         </ThemeProvider>

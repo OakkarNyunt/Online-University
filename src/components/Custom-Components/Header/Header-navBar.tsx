@@ -89,12 +89,12 @@ export function HeaderNavBar() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link to="/docs">Contact</Link>
+            <Link to="/contact">Contact</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild className={navigationMenuTriggerStyle()}>
-            <Link to="/docs">About</Link>
+            <Link to="/about">About</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
       </NavigationMenuList>
