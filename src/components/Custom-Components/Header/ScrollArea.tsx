@@ -1,7 +1,7 @@
 // import * as React from "react";
 
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { Separator } from "@/components/ui/separator";
+// import { Separator } from "@/components/ui/separator";
 import Cart from "./Cart";
 
 // const tags = Array.from({ length: 50 }).map(
