@@ -28,7 +28,7 @@ const Header = () => {
           </Link>
         </div>
 
-        <div className="hidden lg:block">
+        <div className="hidden lg:block z-50">
           <HeaderNavBar />
         </div>
         <div className="gap-2 flex">
