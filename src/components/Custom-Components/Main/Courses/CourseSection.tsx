@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 import { ScrollHorizontal } from "@/components/Custom-Components/Main/Courses/ScrollHorizontal";
 import { Link } from "react-router-dom";
-import CourseCard from "@/components/Custom-Components/Main/Courses/CourseCard";
 
 import { PaginationDemo } from "./Pagination";
+import DialogBox from "./DialogBox/DialogBox";
 
 const CourseSection = () => {
   return (
@@ -31,8 +31,8 @@ const CourseSection = () => {
         {/* Categories PC & Tablet View */}
 
         {/* Course Card Section */}
-        <div className="mt-8">
-          <CourseCard />
+        <div className="mt-8 flex justify-center">
+          <DialogBox />
         </div>
         <div className="mt-8">
           <PaginationDemo />

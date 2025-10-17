@@ -14,12 +14,13 @@ import { FaRegClock } from "react-icons/fa6";
 import { GrMoney } from "react-icons/gr";
 import { Courses } from "@/assets/Data/Courses";
 import { Separator } from "@/components/ui/separator";
+// import { Link } from "react-router-dom";
 
 const CourseCard = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 ">
       {Courses.map((category) => (
-        <Card className="">
+        <Card className="hover:bg-gray-500 hover:text-white">
           <CardContent className="grid grid-cols-1 items-center gap-4">
             <div className="flex justify-center ">
               <img src={img1} alt="logo" className="size-30 lg:20" />
@@ -31,9 +32,7 @@ const CourseCard = () => {
               </div>
             </div>
             <Separator />
-            <p className="text-muted-foreground">
-              Categories: {category.Categories}
-            </p>
+            <p className="">Categories: {category.Categories}</p>
             <div className="space-y-2">
               <div className="flex  my-4 gap-2">
                 <p className="font-semibold flex gap-2 items-center">
