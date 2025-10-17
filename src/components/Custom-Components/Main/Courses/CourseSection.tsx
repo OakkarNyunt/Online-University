@@ -1,28 +1,22 @@
 import { Categories } from "@/assets/Data/Categories";
 
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 
-import { ScrollHorizontal } from "@/components/Custom-Components/Main/ScrollHorizontal";
+import { ScrollHorizontal } from "@/components/Custom-Components/Main/Courses/ScrollHorizontal";
 import { Link } from "react-router-dom";
 import CourseCard from "@/components/Custom-Components/Main/Courses/CourseCard";
-import { Courses } from "@/assets/Data/Courses";
 
-const courseCount = Courses.length;
+import { PaginationDemo } from "./Pagination";
 
 const CourseSection = () => {
   return (
     <div>
       <div className="my-4 p-4  mx-auto container">
-        <p className="font-bold text-xl lg:text-2xl">
-          Available Course - {courseCount}
-        </p>
-        <Separator className="my-4" />
-
-        {/* for Mobile */}
+        {/* Categories for Mobile  */}
         <ScrollHorizontal />
+        {/* Categories for Mobile */}
 
-        {/* PC & Tablet View */}
+        {/* Categories PC & Tablet View */}
         <div className="hidden lg:block container mx-auto">
           <div className="gap-4 flex flex-wrap">
             {Categories.map((category) => (
@@ -34,9 +28,17 @@ const CourseSection = () => {
             ))}
           </div>
         </div>
+        {/* Categories PC & Tablet View */}
+
+        {/* Course Card Section */}
         <div className="mt-8">
           <CourseCard />
         </div>
+        <div className="mt-8">
+          <PaginationDemo />
+        </div>
+
+        {/* Course Card Section */}
       </div>
     </div>
   );
