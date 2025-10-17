@@ -11,13 +11,13 @@ import { PaginationDemo } from "./Pagination";
 const CourseSection = () => {
   return (
     <div>
-      <div className="my-4 p-4  mx-auto container">
+      <div className="my-4">
         {/* Categories for Mobile  */}
         <ScrollHorizontal />
         {/* Categories for Mobile */}
 
         {/* Categories PC & Tablet View */}
-        <div className="hidden lg:block container mx-auto">
+        <div className="hidden lg:block ">
           <div className="gap-4 flex flex-wrap">
             {Categories.map((category) => (
               <Link to="*">

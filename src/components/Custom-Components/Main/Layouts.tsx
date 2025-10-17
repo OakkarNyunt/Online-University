@@ -7,7 +7,7 @@ const Layouts = ({ children }: PropsWithChildren) => {
   return (
     <>
       <Header />
-      <ScrollArea className="min-h-[800px] w-full rounded-md border p-4">
+      <ScrollArea className="min-h-[800px] w-full rounded-md border">
         <main className=" py-[80px]">{children}</main>
       </ScrollArea>
       <Footer />
