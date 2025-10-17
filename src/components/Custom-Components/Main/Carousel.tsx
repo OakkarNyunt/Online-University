@@ -13,7 +13,7 @@ const CarouselDemo = () => {
   return (
     <div>
       <Carousel
-        className="z-0"
+        className=""
         plugins={[
           Autoplay({
             delay: 2000,

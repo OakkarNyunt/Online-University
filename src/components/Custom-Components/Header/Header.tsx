@@ -14,7 +14,7 @@ const isLogin = false;
 
 const Header = () => {
   return (
-    <div className="relative">
+    <div className="relative z-50">
       <div className="fixed right-0 left-0 top-0 border-b-2 p-4  backdrop-blur-sm flex justify-between items-center px-4">
         <div className="lg:hidden mr-2">
           <SideBar />

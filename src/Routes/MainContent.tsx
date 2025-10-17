@@ -1,7 +1,13 @@
+import { Categories } from "@/assets/Data/Categories";
 import CarouselDemo from "@/components/Custom-Components/Main/Carousel";
 import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 
 import { TiPen } from "react-icons/ti";
+
+import { ScrollHorizontal } from "@/components/Custom-Components/Main/ScrollHorizontal";
+import { Link } from "react-router-dom";
+import CourseCard from "@/components/Custom-Components/Main/CourseCard";
 
 const MainContent = () => {
   return (
@@ -30,6 +36,36 @@ const MainContent = () => {
           <CarouselDemo />
         </div>
       </div>
+      <div className="my-4 p-4  mx-auto container">
+        <p className="font-bold text-xl lg:text-2xl">Available Course - 31</p>
+        <Separator className="my-4" />
+
+        {/* for Mobile */}
+        <ScrollHorizontal />
+
+        {/* PC & Tablet View */}
+        <div className="hidden lg:block container mx-auto">
+          <div className="gap-4 flex flex-wrap">
+            {Categories.map((category) => (
+              <Link to="*">
+                <Button variant="outline" key={category.id}>
+                  {category.name}
+                </Button>
+              </Link>
+            ))}
+          </div>
+        </div>
+        <div className="mt-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-4">
+            <CourseCard />
+            <CourseCard />
+            <CourseCard />
+            <CourseCard />
+          </div>
+        </div>
+      </div>
+
+      <div className="">Trending Course</div>
     </div>
   );
 };
