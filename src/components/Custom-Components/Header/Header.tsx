@@ -15,32 +15,37 @@ const isLogin = false;
 const Header = () => {
   return (
     <div className="relative z-50">
-      <div className="fixed right-0 left-0 top-0 border-b-2 p-4  backdrop-blur-sm flex justify-between items-center px-4">
-        <div className="lg:hidden mr-2">
-          <SideBar />
-        </div>
-        <div className="flex gap-2 items-center">
+      <div className="fixed right-0 left-0 top-0 border-b-2 p-4  backdrop-blur-sm flex justify-between items-center">
+        {/* Left: Logo + Sidebar */}
+        <div className="flex items-center gap-4">
+          <div className="lg:hidden">
+            <SideBar />
+          </div>
           <Link to="/">
-            <img src={logo} alt="" className="hidden lg:block md:size-15" />
+            <img src={logo} alt="" className="hidden md:block md:size-12" />
           </Link>
-          <Link to="/">
-            <h3 className="hidden lg:block">Online University</h3>
-          </Link>
+          <h3 className="hidden lg:block">Online University</h3>
         </div>
 
-        <div className="hidden lg:block z-50">
+        <div className="hidden lg:block">
           <HeaderNavBar />
         </div>
-        <div className="gap-2 flex">
+        {/* Right Side */}
+        <div className="flex items-center gap-2">
+          {/* Hide Nav + Select on mobile */}
+
           <div className="hidden lg:block">
             <SelectBox />
           </div>
           <SearchBtn />
 
           <CartSidebar />
-
           <ModeToggle />
-          {isLogin ? <Profile /> : <LoginDialogBox />}
+
+          {/* Always visible */}
+          <div className="pr-6 md:pr-0">
+            {isLogin ? <Profile /> : <LoginDialogBox />}
+          </div>
         </div>
       </div>
     </div>
