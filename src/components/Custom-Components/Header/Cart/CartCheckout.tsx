@@ -18,9 +18,9 @@ const CartCheckOut = () => {
           <CardTitle>Order Details</CardTitle>
           <Separator className="my-2" />
         </CardHeader>
-        <CardContent className="space-y-2">
+        <CardContent className="space-y-2 ">
           <div className="flex justify-between">
-            <CardDescription>Net Amount</CardDescription>
+            <CardDescription className="">Net Amount</CardDescription>
             <CardDescription>300000 MMK</CardDescription>
           </div>
           <div className="flex justify-between">

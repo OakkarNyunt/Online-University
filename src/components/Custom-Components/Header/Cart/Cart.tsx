@@ -15,11 +15,11 @@ const Cart = () => {
       <Card>
         <CardHeader>
           <CardDescription>Description</CardDescription>
-          <CardTitle className="text-sm md:text-md line-clamp-1">
+          <CardTitle className="text-xs md:text-md line-clamp-1">
             Computer Hardware Course
           </CardTitle>
         </CardHeader>
-        <div className="space-y-2">
+        <div className="space-y-2 text-xs md:text-lg line-clamp-1">
           <CardContent className="flex justify-between">
             <p>Instructor:</p>
             <p>Sir Phone Nyo</p>

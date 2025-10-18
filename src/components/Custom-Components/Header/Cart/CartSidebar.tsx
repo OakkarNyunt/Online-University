@@ -47,7 +47,7 @@ const CartSidebar = () => {
         <SheetContent>
           <SheetHeader>
             <SheetTitle>
-              <p className="text-lg md:text-2xl p-4">Your Cart</p>
+              <p className="text-lg md:text-2xl p-2">Your Cart</p>
               <h4 className="mb-4 text-sm leading-none font-medium text-end me-4 ">
                 {isCart > 0 ? `Total - ${isCart}` : null}
               </h4>
