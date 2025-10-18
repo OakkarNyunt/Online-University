@@ -18,12 +18,12 @@ import { Separator } from "@/components/ui/separator";
 
 const CourseCard = ({ onSelect }: { onSelect: any }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-4 gap-4 ">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
       {Courses.map((course) => (
         <Card
           key={course.id}
           onClick={() => onSelect(course.id)}
-          className="hover:bg-gray-500 hover:text-white"
+          className="hover:bg-gray-500 hover:text-white "
         >
           <CardContent className="grid grid-cols-1 items-center gap-4">
             <div className="flex justify-center ">

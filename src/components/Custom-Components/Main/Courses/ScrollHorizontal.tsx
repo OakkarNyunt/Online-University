@@ -9,8 +9,8 @@ export interface Artwork {
 
 export function ScrollHorizontal() {
   return (
-    <ScrollArea className="w-96 md:hidden  rounded-md border whitespace-nowrap">
-      <div className="flex w-max  space-x-4 p-4">
+    <ScrollArea className="min-w-[90px] md:hidden rounded-md border whitespace-nowrap">
+      <div className="flex space-x-4 p-4">
         <div className="gap-4 flex">
           {Categories.map((category) => (
             <Button variant="outline" key={category.id}>

@@ -9,7 +9,7 @@ const courseCount = Courses.length;
 
 const MainContent = () => {
   return (
-    <div className="lg:mx-auto p-4 container">
+    <div className="container mx-auto p-4 lg:p-0">
       {/* Main Motto & Corousel Section */}
       <MottoCarouselSection />
       {/* Main Motto & Corousel Section */}

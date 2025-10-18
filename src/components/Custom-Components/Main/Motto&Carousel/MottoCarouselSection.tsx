@@ -6,9 +6,9 @@ import { TiPen } from "react-icons/ti";
 const MottoCarouselSection = () => {
   return (
     <div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 lg:mt-8 z-0">
-        <div className="flex relative  justify-center items-center border-2 p-16 md:p-0 rounded-2xl backdrop-blur-sm">
-          <div className="space-y-6 ">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-4 lg:mt-8 z-0 ">
+        <div className="flex relative  justify-center items-center border-2 rounded-2xl backdrop-blur-sm">
+          <div className="space-y-6 p-16 ">
             <div className="absolute top-4 right-4">
               <Button className="">
                 <TiPen />

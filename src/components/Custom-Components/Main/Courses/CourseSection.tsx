@@ -11,7 +11,7 @@ import DialogBox from "./DialogBox/DialogBox";
 const CourseSection = () => {
   return (
     <div>
-      <div className="my-4">
+      <div className="">
         {/* Categories for Mobile  */}
         <ScrollHorizontal />
         {/* Categories for Mobile */}

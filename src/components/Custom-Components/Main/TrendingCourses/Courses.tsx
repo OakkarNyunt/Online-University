@@ -5,7 +5,7 @@ import Title from "../Courses/Title";
 const courseCount = Courses.length;
 const TrendingCourses = () => {
   return (
-    <div>
+    <div className="">
       <Title title="Trending Courses" count={courseCount} />
       <CourseSection />
     </div>

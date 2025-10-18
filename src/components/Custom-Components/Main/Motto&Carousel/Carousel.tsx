@@ -22,13 +22,13 @@ const CarouselDemo = () => {
       >
         <CarouselContent>
           <CarouselItem>
-            <img src={img1} alt="" sizes="50" />
+            <img src={img1} alt="" sizes="30" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img1} alt="" sizes="50" />
+            <img src={img1} alt="" sizes="30" />
           </CarouselItem>
           <CarouselItem>
-            <img src={img1} alt="" sizes="50" />
+            <img src={img1} alt="" sizes="30" />
           </CarouselItem>
         </CarouselContent>
         {/* <CarouselPrevious />

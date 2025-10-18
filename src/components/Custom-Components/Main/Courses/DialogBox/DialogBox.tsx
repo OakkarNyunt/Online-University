@@ -27,13 +27,15 @@ const DialogBox = () => {
     <div>
       <Dialog>
         <DialogTrigger>
-          <CourseCard onSelect={setSelectId} />
+          <div className="">
+            <CourseCard onSelect={setSelectId} />
+          </div>
         </DialogTrigger>
-        <DialogContent className="lg:min-w-[800px] min-w-[300px] min-h-[600px]  lg:min-h-[700px]">
-          <ScrollArea className="h-[600px]  p-2 m-2">
+        <DialogContent className="lg:min-w-[800px] min-w-[300px] min-h-[400px]  lg:min-h-[700px]">
+          <DialogTitle className="text-start">Course Details</DialogTitle>
+          <Separator className="my-2" />
+          <ScrollArea className="h-[450px] lg:h-[600px]  p-2 m-2">
             <DialogHeader>
-              <DialogTitle className="text-start">Course Details</DialogTitle>
-              <Separator className="my-2" />
               <DialogDescription>
                 <div className="">
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -41,7 +43,7 @@ const DialogBox = () => {
                       <img
                         src={selectedCourse?.image}
                         alt=""
-                        className="size-30 lg:size-50 my-4 object-contain"
+                        className="size-25 lg:size-50 my-4 object-contain"
                       />
                     </div>
                     <div className="text-start space-y-2">

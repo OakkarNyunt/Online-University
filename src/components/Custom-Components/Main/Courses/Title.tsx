@@ -6,7 +6,7 @@ interface TitleProps {
 const Title = ({ title, count }: TitleProps) => {
   return (
     <div className="my-8">
-      <p className="font-bold text-xl lg:text-2xl ">
+      <p className="font-bold text-xl lg:text-2xl">
         {title} - {count}
       </p>
       <Separator className="mt-4" />
