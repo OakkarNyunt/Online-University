@@ -9,6 +9,7 @@ import A8 from "@/assets/images/tailwind-logo-removebg-preview.png";
 import A9 from "@/assets/images/onlineClass2.jpg";
 import A10 from "@/assets/images/onlineClass3.webp";
 import A11 from "@/assets/images/onlineClass4.webp";
+import A12 from "@/assets/images/unity.jpg";
 
 //Class images
 export const Python = A1;
@@ -19,6 +20,7 @@ export const Csharp = A5;
 export const Laravel = A6;
 export const JavaScript = A7;
 export const TailwindCss = A8;
+export const Unity = A12;
 
 //Carousel images
 export const B1 = A9;
