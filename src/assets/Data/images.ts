@@ -10,6 +10,7 @@ import A9 from "@/assets/images/onlineClass2.jpg";
 import A10 from "@/assets/images/onlineClass3.webp";
 import A11 from "@/assets/images/onlineClass4.webp";
 import A12 from "@/assets/images/unity.jpg";
+import A13 from "@/assets/images/Profile Image.png";
 
 //Class images
 export const Python = A1;
@@ -26,3 +27,6 @@ export const Unity = A12;
 export const B1 = A9;
 export const B2 = A10;
 export const B3 = A11;
+
+//Profile Image
+export const ProfileImg = A13;

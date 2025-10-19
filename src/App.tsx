@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Main from "./Routes/MainContent";
-import Layouts from "./components/Custom-Components/Main/Layouts";
+import Layouts from "./components/Custom-Components/Layouts";
 import About from "./Routes/About";
 import { ThemeProvider } from "./components/Custom-Components/theme/theme-provider";
 import Contact from "./Routes/Contact";
