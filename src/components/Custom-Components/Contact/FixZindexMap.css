@@ -1,0 +1,10 @@
+/* Fix map appearing over dialog (Shadcn or Radix UI) */
+.leaflet-container {
+  z-index: 0 !important;
+}
+
+.leaflet-pane,
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 0 !important;
+}

@@ -1,5 +1,6 @@
 import { Separator } from "@/components/ui/separator";
 import Map from "./Map";
+import "@/components/Custom-Components/Contact/FixZindexMap.css";
 
 const ContactPage = () => {
   return (
