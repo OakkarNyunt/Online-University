@@ -27,7 +27,7 @@ const CarouselDemo = () => {
         className=""
         plugins={[
           Autoplay({
-            delay: 8000,
+            delay: 6000,
           }),
         ]}
       >

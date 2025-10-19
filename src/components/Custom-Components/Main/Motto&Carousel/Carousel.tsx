@@ -21,7 +21,7 @@ const CarouselDemo = () => {
         ]}
       >
         <CarouselContent>
-          <CarouselItem className="bg-amber-600">
+          <CarouselItem className="">
             <img src={B1} alt="image" className="size-full object-contain" />
           </CarouselItem>
           <CarouselItem>

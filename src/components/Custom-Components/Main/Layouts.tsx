@@ -7,7 +7,7 @@ const Layouts = ({ children }: PropsWithChildren) => {
     <>
       <Header />
 
-      <main className="py-[80px]">{children}</main>
+      <main className="py-[80px] min-h-screen">{children}</main>
 
       <Footer />
     </>
