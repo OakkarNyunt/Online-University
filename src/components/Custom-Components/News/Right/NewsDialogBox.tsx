@@ -11,44 +11,53 @@ import {
 } from "@/components/ui/dialog";
 
 import NewsCard from "./NewsCard";
-import { Python } from "@/assets/Data/images";
+
 import { ScrollArea } from "@/components/ui/scroll-area";
 import AccordionDemo from "./Accordion";
+import { useState } from "react";
+import { Articles } from "@/assets/Data/Article";
 
 export function NewsDialogBox() {
+  const [selectId, setSelectId] = useState(null);
+  const getDataUsingId = Articles.find((a) => a.id === selectId);
   return (
     <Dialog>
       <form>
         <DialogTrigger asChild>
           <div className="">
-            <NewsCard />
+            <NewsCard id={setSelectId} />
           </div>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px] md:max-w-[825px] min-h-[500px] md:min-h-[600px] ">
           <DialogHeader className="text-start space-y-4">
-            <DialogTitle>API အကြောင်း တစေ့တစောင်း</DialogTitle>
+            {/* {selectId} testing */}
+            <DialogTitle>{getDataUsingId?.Name}</DialogTitle>
             <div className="flex justify-between">
-              <DialogDescription>Name: Oakkar</DialogDescription>
-              <DialogDescription>Time: 2 hours ago</DialogDescription>
+              <DialogDescription>
+                Name: {getDataUsingId?.Author}
+              </DialogDescription>
+              <DialogDescription>
+                Date: {getDataUsingId?.Date}
+              </DialogDescription>
             </div>
           </DialogHeader>
           <ScrollArea className="h-[400px] md:h-[600px] md:max-w-[800px] max-w-[425px] rounded-md border p-4">
             <div className="flex justify-center">
               <img
-                src={Python}
+                src={getDataUsingId?.image}
                 alt=""
                 className="size-30 lg:size-50 object-contain "
               />
             </div>
             <div className="">
-              <AccordionDemo />
+              <AccordionDemo content={getDataUsingId?.Content} />
             </div>
           </ScrollArea>
           <DialogDescription className="flex justify-between gap-2 text-xs">
-            <p>Love : 30K</p>
-            <p>Comments: 1.5K</p>
-            <p>Save : 100K</p>
-            <p>View : 100K</p>
+            <p>Love : {getDataUsingId?.Love}</p>
+            <p>Comments: {getDataUsingId?.Comment}</p>
+            <p>Save : {getDataUsingId?.Save}</p>
+            <p>View : {getDataUsingId?.View}</p>
           </DialogDescription>
           <DialogFooter className="">
             <div className="flex gap-2">

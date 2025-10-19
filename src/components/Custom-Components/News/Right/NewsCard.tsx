@@ -11,12 +11,15 @@ import {
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
-const NewsCard = () => {
+const NewsCard = ({ id }: { id: any }) => {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-2">
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
       {Articles.map((article) => (
         <div className="" key={article.id}>
-          <Card className="sm:text-xs md:text-md hover:bg-gray-500 hover:text-white">
+          <Card
+            className="sm:text-xs md:text-md hover:bg-gray-500 hover:text-white"
+            onClick={() => id(article.id)}
+          >
             <CardHeader className="flex justify-between gap-4 items-center">
               <div className="space-y-4 ">
                 <CardTitle className="">Name: {article.Name}</CardTitle>
