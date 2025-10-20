@@ -14,6 +14,10 @@ import { GrMoney } from "react-icons/gr";
 import { Courses } from "@/assets/Data/Courses";
 import { Separator } from "@/components/ui/separator";
 
+import { IoIosPeople } from "react-icons/io";
+import { IoIosStar } from "react-icons/io";
+import { GiTrophyCup } from "react-icons/gi";
+
 // import { Link } from "react-router-dom";
 
 const CourseCard = ({ onSelect }: { onSelect: any }) => {
@@ -64,10 +68,16 @@ const CourseCard = ({ onSelect }: { onSelect: any }) => {
                 <p>{course.Fees}</p>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-2 text-sm">
-              <p>Learners : {course.Learners}</p>
-              <p>Rating : {course.Rating}</p>
-              <p>Certificated : {course.Certificated}</p>
+            <div className="flex justify-between gap-2 my-4 text-md">
+              <p className="flex gap-2 items-center">
+                <IoIosPeople /> {course.Learners}
+              </p>
+              <p className="flex gap-2 items-center">
+                <IoIosStar /> {course.Rating}
+              </p>
+              <p className="flex gap-2 items-center">
+                <GiTrophyCup /> {course.Certificated}
+              </p>
             </div>
           </CardContent>
         </Card>

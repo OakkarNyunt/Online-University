@@ -24,7 +24,7 @@ const Header = () => {
           <Link to="/">
             <img src={logo} alt="" className="hidden md:block md:size-12" />
           </Link>
-          <h3 className="hidden lg:block">Online University</h3>
+          <h3 className="hidden lg:block font-semibold">Online University</h3>
         </div>
 
         <div className="hidden lg:block">

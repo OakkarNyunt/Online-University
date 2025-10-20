@@ -13,7 +13,7 @@ import {
 export const Articles = [
   {
     id: 1,
-    Name: "Restful APi",
+    Name: "Restful API",
     Author: "Oakkar",
     Date: "2 hours ago",
     image: Python,

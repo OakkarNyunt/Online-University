@@ -7,7 +7,7 @@ export function LoginDialogBox() {
     <Dialog>
       <form>
         <DialogTrigger asChild>
-          <Button variant="outline">Log in</Button>
+          <Button>Log in</Button>
         </DialogTrigger>
         <DialogContent className="sm:max-w-[425px]">
           <LoginSignUpTab />
